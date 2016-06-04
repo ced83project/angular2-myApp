@@ -4,15 +4,26 @@
     <!-- #docregion base-href -->
   <head>
     <base href="/">
-    <!-- #enddocregion base-href -->
-    <title>Angular 2 Tour of Heroes</title>
+    <title>Angular 2 - MyApp</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Cedric Beyls">
+    <link rel="icon" href="../../favicon.ico">
 
-    <!-- #enddocregion head -->
-    <!-- #docregion css -->
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
-    <!-- #enddocregion css -->
-    <!-- #docregion head -->
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="node_modules/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="node_modules/respond/dist/respond.min.js"></script>
+    <![endif]-->
+    
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
@@ -22,18 +33,37 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <!-- #docregion router -->
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <!-- #enddocregion router -->
     <script>
       System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
       System.import('app/main')
             .then(null, console.error.bind(console));
     </script>
   </head>
-  <!-- #enddocregion head -->
 
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
     <my-app>Loading...</my-app>
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 {
   "name": "angular2-tour-of-heroes",
   "version": "0.0.1",
+  "author": "Cedric Beyls",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
@@ -11,10 +12,14 @@
   },
   "dependencies": {
     "angular2": "2.0.0-beta.15",
-    "systemjs": "0.19.26",
+    "bootstrap": "^3.3.6",
     "es6-shim": "^0.35.0",
+    "html5shiv": "^3.7.3",
+    "jquery": "^2.2.4",
     "reflect-metadata": "0.1.2",
+    "respond": "^0.9.0",
     "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.26",
     "zone.js": "0.6.10"
   },
   "devDependencies": {
