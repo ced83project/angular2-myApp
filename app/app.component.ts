@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
@@ -23,4 +23,5 @@ import { HeroService } from './hero.service';
 ])
 export class AppComponent {
   title = 'Tour of Heroes';
+  constructor(private router: Router){}
 }
