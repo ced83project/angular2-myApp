@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }           from '@angular/router-deprecated';
+import { Router, ROUTER_DIRECTIVES}           from '@angular/router-deprecated';
 
 import { Hero }        from './hero';
 import { HeroService } from './hero.service';
@@ -7,7 +7,8 @@ import { HeroService } from './hero.service';
 @Component({
   selector: 'my-dashboard',
   templateUrl: 'app/dashboard.component.html',
-  styleUrls: ['app/dashboard.component.css']
+  styleUrls: ['app/dashboard.component.css'],
+  directives: [ROUTER_DIRECTIVES]
 })
 export class DashboardComponent implements OnInit {
 

@@ -1,8 +1,15 @@
-<h3>Top Heroes</h3>
-<div class="grid grid-pad">
-  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
-    <div class="module hero">
-      <h4>{{hero.name}}</h4>
+<h1>Dashboard</h1>
+<ol class="breadcrumb">
+  <li><a [routerLink]="['Dashboard']">myApp</a></li>
+  <li class="active">Dashboard</li>
+</ol>
+<h2>Best Heroes</h2>
+<div class="row">
+  <div *ngFor="let hero of heroes" class="col-lg-3">
+    <div (click)="gotoDetail(hero)" class="panel panel-default">
+      <div class="panel-body">
+        {{hero.name}}
+      </div>
     </div>
   </div>
 </div>
