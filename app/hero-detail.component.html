@@ -1,11 +1,17 @@
 <div *ngIf="hero">
-  <h2>{{hero.name}} details!</h2>
-  <div>
-    <label>id: </label>{{hero.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name" />
-   </div>
-  <button (click)="goBack()">Back</button>
-  <button (click)="save()">Save</button>
+  <h1>{{hero.name}}</h1>
+  <form>
+    <div class="form-group label-floating">
+      <label class="control-label col-xs-2" for="id">Id</label>
+      <input id="id" class="form-control col-xs-10" type="text" placeholder="{{hero.id}}" aria-describedby="id-help" readonly />
+      <p id="id-help" class="help-block">Read only.</p>
+    </div>
+    <div class="form-group label-floating">
+      <label class="control-label col-xs-2" for="name">Name</label>
+      <input id="name" class="form-control col-xs-10" type="text" [(ngModel)]="hero.name" placeholder="name" aria-describedby="name-help" />
+      <p id="name-help" class="help-block">Help text here.</p>
+    </div>
+    <button class="btn btn-default" (click)="goBack()">Back</button>
+    <button class="btn btn-primary" (click)="save()">Save</button>
+  </form>
 </div>

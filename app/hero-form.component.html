@@ -1,0 +1,24 @@
+<div class="panel panel-default" [hidden]="submitted">
+  <div class="panel-heading">
+    <h1>Hero Form</h1>
+  </div>
+  <div class="panel-body">
+    <form *ngIf="active" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label class="control-label" for="name">Name</label>
+        <input id="name" class="form-control" type="text" [(ngModel)]="model.name" ngControl="name" #name="ngForm" placeholder="Enter your name..." aria-describedby="name-help" required />
+        <p id="name-help" class="help-block" [hidden]="name.valid || name.pristine" >Help text here.</p>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="power">Power</label>
+        <select class="form-control" [(ngModel)]="model.power" ngControl="power" #power="ngForm" required >
+          <option *ngFor="let p of powers" [value]="p">{{p}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+      <button type="button" class="btn btn-default" (click)="reset()">Reset</button>
+      <button type="submit" class="btn btn-primary btn-raised" [disabled]="!heroForm.form.valid">Submit</button>
+    </form>
+  </div>
+</div>
+    

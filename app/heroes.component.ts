@@ -4,15 +4,17 @@ import { Router, ROUTER_DIRECTIVES }            from '@angular/router-deprecated
 import { Hero }                from './hero';
 import { HeroService }         from './hero.service';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroFormComponent } from './hero-form.component';
 
 @Component({
   selector: 'my-heroes',
   templateUrl: 'app/heroes.component.html',
   styleUrls:  ['app/heroes.component.css'],
-  directives: [ROUTER_DIRECTIVES, HeroDetailComponent]
+  directives: [ROUTER_DIRECTIVES, HeroDetailComponent, HeroFormComponent]
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  selectedHero: Hero;
   selectedHero: Hero;
   addingHero = false;
   error: any;
