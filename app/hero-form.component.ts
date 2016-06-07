@@ -14,7 +14,8 @@ export class HeroFormComponent implements OnInit {
   @Output() close = new EventEmitter();
 
   powers = ['Choose a power...', 'Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
-  model = new Hero(18, 'Dr IQ', this.powers[1], 'Chuck Overstreet');
+  model = new Hero();
+
   error: any;
   submitted = false;
   navigated = false;

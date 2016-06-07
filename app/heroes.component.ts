@@ -15,7 +15,6 @@ import { HeroFormComponent } from './hero-form.component';
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
-  selectedHero: Hero;
   addingHero = false;
   error: any;
 
