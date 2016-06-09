@@ -14,7 +14,6 @@ export class HeroFormComponent implements OnInit {
   @Output() close = new EventEmitter();
 
   powers = ['Choose a power...', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  model = new Hero();
 
   error: any;
   submitted = false;
