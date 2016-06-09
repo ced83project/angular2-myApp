@@ -10,10 +10,10 @@ import { HeroService } from './hero.service';
 })
 export class HeroFormComponent implements OnInit {
 
-  @Input() hero: Hero;
+  @Input() model: Hero;
   @Output() close = new EventEmitter();
 
-  powers = ['Choose a power...', 'Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
+  powers = ['Choose a power...', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   model = new Hero();
 
   error: any;
@@ -34,7 +34,9 @@ export class HeroFormComponent implements OnInit {
           .then(hero => this.model = hero);
     } else {
       this.navigated = false;
-      this.model = new Hero();
+      if(this.model === null) {
+        this.model = new Hero();
+      }
     }
   }
 
