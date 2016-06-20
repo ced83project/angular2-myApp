@@ -10,10 +10,12 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <ul class="list-group">
-          <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.active]="hero === selectedHero" class="list-group-item">
+          <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.active]="hero === selectedHero" class="list-group-item clearfix">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
-            <button class="pull-right btn btn-primary" (click)="onUpdate(hero, $event)">Update</button>
-            <button class="pull-right btn btn-danger" (click)="onDelete(hero, $event)">Delete</button>
+            <div class="pull-right">
+              <button class="btn btn-sm btn-primary" (click)="onUpdate(hero, $event)">Update</button>
+              <button class="btn btn-sm btn-danger" (click)="onDelete(hero, $event)">Delete</button>
+            </div>
           </li>
         </ul>
       </div>  
